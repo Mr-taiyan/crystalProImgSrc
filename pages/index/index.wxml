@@ -1,0 +1,71 @@
+<!-- index.wxml -->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="container">
+  <view class="page-body">
+    <view class="header">
+      <swiper indicator-dots="{{true}}" class="banner">
+        <block wx:for="{{banners}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="nav">
+    <view>新品</view>
+    <view>网红新品</view>
+    <view>热销新品</view>
+    <view>热销定制</view>
+  </view>
+  <view class="popular-stuffs">
+    <view class="title">
+      <image src="/images/title-popular.png" mode="widthFix" />
+    </view>
+    <scroll-view scroll-x="{{true}}">
+      <view class="gallery">
+        <view class="img-block" wx:for="{{images1}}" wx:key="*this" bindtap="bindViewTap" data-src="{{item}}">
+          <image src="{{item}}" mode="widthFix" style="width:314rpx " />
+          <view>产品</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="popular-stuffs">
+    <view class="title">
+      <image src="/images/title-popular.png" mode="widthFix" />
+    </view>
+    <scroll-view scroll-x="{{true}}">
+      <view class="gallery">
+        <view class="img-block" wx:for="{{images1}}" wx:key="*this">
+          <image src="{{item}}" mode="widthFix" style="width:314rpx " />
+          <view>产品</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="popular-stuffs">
+    <view class="title">
+      <image src="/images/title-popular.png" mode="widthFix" />
+    </view>
+    <scroll-view scroll-x="{{true}}">
+      <view class="gallery">
+        <view class="img-block" wx:for="{{images1}}" wx:key="*this">
+          <image src="{{item}}" mode="widthFix" style="width:314rpx " />
+          <view>产品</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
